@@ -24,6 +24,23 @@ export default {
       </Box>
     ),
   ],
+
+  argTypes: {
+    size: {
+      // options: ['primary', 'secondary', 'tertiary'],
+      control: {
+        type: 'number',
+        min: 1,
+      },
+    },
+    currentStep: {
+      // options: ['primary', 'secondary', 'tertiary'],
+      control: {
+        type: 'number',
+        min: 1,
+      },
+    },
+  },
 } as Meta<MultiStepProps>
 
 export const Primary: StoryObj<MultiStepProps> = {
