@@ -3,17 +3,17 @@ import { ComponentProps } from 'react'
 import {
   ToastClose,
   ToastDescription,
-  ToastProvider as ToastProviderStyle,
+  ToastProvider as ToastProviderPrimitive,
   ToastRoot,
   ToastTitle,
   ToastViewport,
 } from './styles'
 
 export interface ToastProviderProps
-  extends ComponentProps<typeof ToastProviderStyle> {}
+  extends ComponentProps<typeof ToastProviderPrimitive> {}
 
 export function ToastProvider({ children, ...props }: ToastProviderProps) {
-  return <ToastProviderStyle {...props}>{children}</ToastProviderStyle>
+  return <ToastProviderPrimitive {...props}>{children}</ToastProviderPrimitive>
 }
 
 export interface ToastProps extends ComponentProps<typeof ToastRoot> {
